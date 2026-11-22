@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 1,
+  "id": "palettebuilder",
+  "version": "${version}",
+  "name": "Palette Builder",
+  "description": "Client-side menu to build paths and walls from mixed block palettes.",
+  "authors": ["You"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": ["com.palettebuilder.PaletteBuilderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.3",
+    "java": ">=25",
+    "fabric-api": "*"
+  }
+}
