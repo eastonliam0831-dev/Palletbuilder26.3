@@ -25,7 +25,7 @@ public final class Builder {
 	private static final Deque<List<PlacementQueue.Placement>> UNDO = new ArrayDeque<>();
 
 	private static void say(LocalPlayer player, String msg) {
-		player.displayClientMessage(Component.literal("Palette Builder: " + msg), false);
+		player.sendSystemMessage(Component.literal("Palette Builder: " + msg));
 	}
 
 	private static String id(Block b) {

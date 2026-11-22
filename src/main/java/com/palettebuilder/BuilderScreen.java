@@ -115,19 +115,19 @@ public class BuilderScreen extends Screen {
 		button(cx - 155, y, 76, "Build", () -> {
 			Settings.save();
 			Minecraft mc = Minecraft.getInstance();
-			mc.setScreen(null);
+			mc.gui.setScreen(null);
 			Builder.build(mc);
 		});
 		button(cx - 76, y, 76, "Undo last", () -> {
 			Settings.save();
 			Minecraft mc = Minecraft.getInstance();
-			mc.setScreen(null);
+			mc.gui.setScreen(null);
 			Builder.undo(mc);
 		});
 		button(cx + 3, y, 76, "Cancel queue", () -> PlacementQueue.clear());
 		button(cx + 82, y, 73, "Close", () -> {
 			Settings.save();
-			Minecraft.getInstance().setScreen(null);
+			Minecraft.getInstance().gui.setScreen(null);
 		});
 	}
 

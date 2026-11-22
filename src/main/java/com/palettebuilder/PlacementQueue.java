@@ -49,9 +49,9 @@ public final class PlacementQueue {
 		}
 		ticks++;
 		if (QUEUE.isEmpty()) {
-			mc.player.displayClientMessage(Component.literal("Palette Builder: finished (" + total + " blocks)"), true);
+			mc.player.sendOverlayMessage(Component.literal("Palette Builder: finished (" + total + " blocks)"));
 		} else if (ticks % 10 == 0) {
-			mc.player.displayClientMessage(Component.literal("Palette Builder: " + (total - QUEUE.size()) + " / " + total), true);
+			mc.player.sendOverlayMessage(Component.literal("Palette Builder: " + (total - QUEUE.size()) + " / " + total));
 		}
 	}
 }

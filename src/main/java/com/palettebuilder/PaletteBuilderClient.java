@@ -17,12 +17,12 @@ public class PaletteBuilderClient implements ClientModInitializer {
 		KeyMapping.Category category = KeyMapping.Category.register(
 				Identifier.fromNamespaceAndPath("palettebuilder", "main"));
 		openKey = KeyMappingHelper.registerKeyMapping(new KeyMapping(
-				"key.palettebuilder.open", InputConstants.Type.KEYSYM, InputConstants.KEY_B, category));
+				"key.palettebuilder.open", InputConstants.Type.KEYBOARD, InputConstants.KEY_B, category));
 
 		ClientTickEvents.END_CLIENT_TICK.register(client -> {
 			while (openKey.consumeClick()) {
-				if (client.player != null && client.screen == null) {
-					client.setScreen(new BuilderScreen());
+				if (client.player != null && client.gui.screen() == null) {
+					client.gui.setScreen(new BuilderScreen());
 				}
 			}
 			PlacementQueue.tick(client);
